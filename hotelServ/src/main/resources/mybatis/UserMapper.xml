@@ -3,9 +3,21 @@
                         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.co.kr.mapper.UserMapper">
 
-    <!-- delete -->
-    <delete id="mbRemove" parameterType="hashMap">
-       DELETE FROM jsp.member WHERE mb_seq=#{mbSeq}
-    </delete>
+	<select id="htSelectList" resultType="com.co.kr.domain.HotelDomain" parameterType="hashMap">
+	    SELECT * FROM hotel.hotela WHERE ht_seq=#{htSeq}
+	</select>
+	
+	<insert id="htCreate" parameterType="com.co.kr.domain.HotelDomain" >
+	   INSERT INTO hotel.hotela(
+	   	ht_Name,
+	   	ht_Room,
+	   	ht_create_at,
+	   	ht_update_at)  
+	   VALUES (
+	   	#{htId},
+	   	#{htPw},
+	   	now(),
+	   	now())
+	</insert>
     
 </mapper>
