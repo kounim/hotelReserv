@@ -61,7 +61,7 @@ public class ReservationController {
   		String ht_image="sungnam1";
   		mav.addObject("ht_image", ht_image);
   		mav.addObject("ht_nm", ht_nm);
-        mav.setViewName("reservation/reserv"); 
+        mav.setViewName("reservation/reservation"); 
         return mav;
       };
       
