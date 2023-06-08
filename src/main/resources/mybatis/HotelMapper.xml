@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+                        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.loginSignup.mapper.HotelMapper">
+
+	<select id="reservationList" resultType="com.loginSignup.domain.HotelDomain">
+	  SELECT rez_name, rez_email, rez_number, rez_brekkie, rez_date, rez_room, bd_create_at, bd_update_at
+	  FROM hotel.rez order by bd_update_at desc
+	</select>
+
+    <!-- selectId -->
+	<select id="rezSelectList" resultType="com.loginSignup.domain.HotelDomain" parameterType="hashMap">
+	    SELECT * FROM hotel.rez WHERE rez_name=#{rezName}
+	</select>
+	
+	
+	
+    <!-- selectAll -->
+	<select id="rezAllList" resultType="com.loginSignup.domain.HotelDomain" parameterType="map">
+	    SELECT * FROM hotel.rez order by mb_update_at desc limit #{offset}, #{contentnum}
+	</select>
+	
+	<!-- create -->
+	<insert id="rezCreate" parameterType="com.loginSignup.domain.HotelDomain" >
+	   INSERT INTO hotel.rez(rez_name, rez_email, rez_number, rez_brekkie, rez_date, rez_room, bd_create_at, bd_update_at)  
+	   VALUES (#{rezName}, #{rezEmail}, #{rezNumber}, #{rezBrekkie}, #{rezDate}, #{rezRoom}, now(), now())
+	</insert>
+	
+	<!-- mbGetAll -->
+	<select id="rezGetAll" resultType="int">
+	   SELECT COUNT(*) FROM hotel.rez
+	</select>
+	
+	<!-- duplicationCheck -->
+	<select id="rezDuplicationCheck" resultType="int" parameterType="hashMap">
+	   SELECT COUNT(*) FROM hotel.rez WHERE rez_date=#{rezDate} AND rez_room=#{rezRoom}
+	</select>
+
+	<!-- mbGetId -->	
+	<select id="rezGetId" resultType="com.loginSignup.domain.HotelDomain" parameterType="hashMap">
+	   SELECT * FROM hotel.rez WHERE rez_name=#{rezName}
+	</select>
+	
+	<!-- update -->
+	<update id="rezUpdate" parameterType="com.loginSignup.domain.HotelDomain">
+		UPDATE hotel.rez SET
+		        rez_email=#{rezEmail},
+		        rez_number=#{rezNumber},
+	            rez_brekkie=#{rezBrekkie},
+	            rez_date=#{rezDate}, 
+	            rez_room=#{rezRoom}  
+	    WHERE rez_name=#{rezName}
+	</update>
+	
+	<!-- delete -->
+	<delete id="rezRemove" parameterType="hashMap">
+	   DELETE FROM hotel.rez WHERE email=#{email}
+	</delete>
+</mapper>

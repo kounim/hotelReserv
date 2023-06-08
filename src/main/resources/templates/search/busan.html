@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net/nz/thymeleaf/layout"
+    layout:decorate="~{layouts/layout1}">
+    <head>
+        <title>호텔 예약 사이트</title>
+    </head>
+    <body>
+    	<div layout:fragment="content">
+            <div id="map" style="width:1400px;height:800px;"></div>
+			<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=90f86c1468acc59b2de42c2044d3a2db"></script>
+			<script type="text/javascript" th:inline="javascript">
+						var mapContainer = document.getElementById('map'),
+				    	mapOption = { 
+				   	    	center: new kakao.maps.LatLng(35.180025163225004, 129.07510807372174),
+				        	level: 3
+				    	};
+			</script>
+			<script type="text/javascript" th:src="@{/js/scripts.js}"></script>
+		</div>
+	</body>
+</html>

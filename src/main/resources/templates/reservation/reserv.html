@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net/nz/thymeleaf/layout"
+    layout:decorate="~{layouts/layout1}">
+    <head>
+        <title>호텔 예약 사이트</title>
+    </head>
+    <body>
+    	<div layout:fragment="content">
+    	<a th:text="${ht_nm}"></a><br>
+    	<img th:src="@{/images/}+${ht_image}+.png">
+    	<script type="text/javascript" th:src="@{/js/scripts.js}"></script>
+    	</div>
+    </body>
+</html>
+    	
