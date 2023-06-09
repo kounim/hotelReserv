@@ -26,5 +26,9 @@ public class HotelDomain {
     
     private String rezRoom;
     
-    private String ht_nm;
+    private String hotelName;
+    
+    
+    
+    
 }

@@ -26,6 +26,10 @@ public class HotelServiceImpl implements HotelService {
 	@Autowired
 	private HotelMapper hotelMapper;
 	
+	public List<HotelDomain> htList(){
+		return hotelMapper.htList();
+	}
+	
 	public List<HotelDomain> reservationList(){
 		return hotelMapper.reservationList();
 	}
@@ -43,7 +47,7 @@ public class HotelServiceImpl implements HotelService {
 			.rezBrekkie(reservationVO.getRezBrekkie())
 			.rezDate(reservationVO.getRezDate())
 			.rezRoom(reservationVO.getRezRoom())
-			.ht_nm(reservationVO.getHt_nm())
+			.hotelName(reservationVO.getHotelName())
 			.build();
 	
 			

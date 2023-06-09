@@ -53,7 +53,7 @@ public class ConfirmController {
                 .rezBrekkie(reservationVO.getRezBrekkie())
                 .rezDate(reservationVO.getRezDate())
                 .rezRoom(reservationVO.getRezRoom())
-                .hotelName(reservationVO.getHt_nm())
+                .hotelName(reservationVO.getHotelName())
                 .build();
         reservationRepository.save(reservation);
 
@@ -64,7 +64,7 @@ public class ConfirmController {
         mav.addObject("rezBrekkie", reservationVO.getRezBrekkie());
         mav.addObject("rezDate", reservationVO.getRezDate());
         mav.addObject("rezRoom", reservationVO.getRezRoom());
-        mav.addObject("ht_nm", reservationVO.getHt_nm());
+        mav.addObject("hotelName", reservationVO.getHotelName());
 
         mav.setViewName("reservation/confirm.html");
         return mav;
@@ -96,7 +96,7 @@ public class ConfirmController {
             mav.addObject("rezBrekkie", reservationVO.getRezBrekkie());
             mav.addObject("rezDate", reservationVO.getRezDate());
             mav.addObject("rezRoom", reservationVO.getRezRoom());
-            mav.addObject("ht_nm", reservationVO.getHt_nm());
+            mav.addObject("hotelName", reservationVO.getHotelName());
         }
 
         System.out.print('b');

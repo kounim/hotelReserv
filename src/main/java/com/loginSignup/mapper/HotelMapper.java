@@ -13,6 +13,8 @@ public interface HotelMapper {
 	
 	public List<HotelDomain> reservationList();
 	
+	public List<HotelDomain> htList();
+	
 	//전체 리스트 조회
 	public HotelDomain rezSelectList(Map<String, String> map);
     

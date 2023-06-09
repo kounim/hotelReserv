@@ -13,6 +13,10 @@
 	    SELECT * FROM hotel.rez WHERE rez_name=#{rezName}
 	</select>
 	
+	<select id="htList" resultType="com.loginSignup.domain.HotelDomain" >
+	    SELECT * FROM hotel.rez
+	</select>
+	
 	
 	
     <!-- selectAll -->

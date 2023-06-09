@@ -22,5 +22,6 @@ public class ReservationVO {
     
     private String rezRoom;
     
-    private String ht_nm;
+    private String hotelName;
+    
 }

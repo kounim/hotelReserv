@@ -12,6 +12,9 @@ import com.loginSignup.entity.Reservation;
 
 
 public interface HotelService {
+	
+	public List<HotelDomain> htList();
+	
 	  // selectId
 	public List<HotelDomain> reservationList();
 	
