@@ -16,7 +16,7 @@ var positions = [
            	'<div style="padding:5px;">' +
             '성남호텔1 <br>'+
             '	<div>'+
-            '		<img src="/images/hotel03.png" width="73" height="70" width="73" height="70">' +
+            '		<img src="/images/sungnam1.png" width="73" height="70" width="73" height="70">' +
             '	</div>' +
             '	<a href="http://localhost:8080/reservation/sungnam1" style="color:blue" target="_blank">예약페이지로</a>' +
             '</div>',
@@ -27,7 +27,7 @@ var positions = [
            	'<div style="padding:5px;">' +
             '성남호텔2 <br>'+
             '	<div>'+
-            '		<img src="/images/hotel03.png" width="73" height="70">' +
+            '		<img src="/images/sungnam2.png" width="73" height="70">' +
             '	</div>' +
             '	<a href="http://localhost:8080/reservation/sungnam2" style="color:blue" target="_blank">예약페이지로</a>' +
             '</div>',
@@ -62,7 +62,7 @@ var positions = [
        	'<div style="padding:5px;">' +
         '부산호텔1 <br>'+
         '	<div>'+
-        '		<img src="/images/hotel01.png" width="73" height="70" width="73" height="70">' +
+        '		<img src="/images/busan1.png" width="73" height="70" width="73" height="70">' +
         '	</div>' +
         '	<a href="http://localhost:8080/reservation/busan1" style="color:blue" target="_blank">예약페이지로</a>' +
         '</div>',

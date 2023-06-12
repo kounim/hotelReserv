@@ -8,5 +8,5 @@ import com.loginSignup.dto.HotelListDto;
 
 @Mapper
 public interface HotelListMapper {
-	List<HotelListDto> selectBoardList() throws Exception; 
+	List<HotelListDto> selectHotelList() throws Exception; 
 }

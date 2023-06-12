@@ -36,10 +36,10 @@ public class AdminController {
     public ModelAndView openhotelList() throws Exception {
 		ModelAndView mav = new ModelAndView();
 		//List<HotelListDto> list = hotelListService.selectBoardList();
-		mav.addObject("list", hotelListService.selectBoardList());
+		mav.addObject("list", hotelListService.selectHotelList());
         mav.setViewName("admin/hotelList.html"); 
         
-        System.out.println("list = "+hotelListService.selectBoardList());
+        System.out.println("list = "+hotelListService.selectHotelList());
         
         return mav;
     };

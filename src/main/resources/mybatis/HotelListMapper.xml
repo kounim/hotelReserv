@@ -5,13 +5,22 @@
 <mapper namespace="com.loginSignup.mapper.HotelListMapper">	<!-- xml파일을 사용할 mapper가 있는 경로 -->
   
 	<!-- <select> 태그를 이용하여 select 쿼리임을 나타냄. 앞서 mapper에서 말했던 메소드의 이름은 select 쿼리의 id값과 같아야함. -->
-	<select id="selectBoardList" resultType="com.loginSignup.dto.HotelListDto">	
+	<select id="selectHotelList" resultType="com.loginSignup.dto.HotelListDto">	
+		<![CDATA[
+			SELECT
+				htseq, htname, htreservation, DATE_FORMAT(htcreateat, '%Y.%m.%d %H:%i:%s') AS htcreateat, htlocationx, htlocationy
+			FROM
+				hotel.hotelb
+		]]>
+	</select>
+	
+	<insert id="htcreate">
 		<![CDATA[
 			SELECT
 				htseq, htname, htroom, DATE_FORMAT(htcreateat, '%Y.%m.%d %H:%i:%s') AS htcreateat, htlocationx, htlocationy
 			FROM
 				hotel.hotelb
 		]]>
-	</select>
+	</insert>
 	
 </mapper>

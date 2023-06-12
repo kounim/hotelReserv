@@ -15,8 +15,8 @@ public class HotelListServiceImpl implements HotelListService{
 	private HotelListMapper hotelListMapper;
 
 	@Override
-	public List<HotelListDto> selectBoardList() throws Exception {
+	public List<HotelListDto> selectHotelList() throws Exception {
 		// TODO Auto-generated method stub
-		return hotelListMapper.selectBoardList();
+		return hotelListMapper.selectHotelList();
 	}
 }

@@ -6,6 +6,6 @@ import com.loginSignup.dto.HotelListDto;
 
 public interface HotelListService {
 
-    List<HotelListDto> selectBoardList() throws Exception;
+    List<HotelListDto> selectHotelList() throws Exception;
 
 }
